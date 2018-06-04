@@ -1,4 +1,3 @@
 def count_elements(array)
-  # code goes here
+  array.inject(Hash.new(0)) { |total, e| total[e] += 1 ;total}
 end
- 
