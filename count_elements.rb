@@ -1,16 +1,5 @@
-require 'pry'
-
 def count_elements(array)
-  new_hash = {}
-  count = 0
-  array.collect do |animal|
-    if count == 0
-      count += 1
-      new_hash[animal] = count
-    else
-      count += 1
-      new_hash[animal] = count
-    end
-  end
-  new_hash
+  count = Hash.new(0)
+  array.each {|item| count[item] += 1 }
+  count
 end
